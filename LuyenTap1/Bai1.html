@@ -7,15 +7,18 @@
 <body>
 <script>
   let arr = [];
-   arr[0] = prompt("Nhập vào số thứ nhất");
-   arr[1] = prompt("Nhập vào số thứ hai");
-   arr[2] = prompt("Nhập vào số thứ ba");
-   arr[3] = prompt("Nhập vào số thứ tư");
-   arr[4] = prompt("Nhập vào số thứ năm");
-   arr[6] = prompt("Nhập vào số thứ bảy");
-   arr[7] = prompt("Nhập vào số thứ tám");
-   arr[8] = prompt("Nhập vào số thứ chín");
-   arr[9] = prompt("Nhập vào số thứ mười");
+  for (let i = 0; i < 10; i++) {
+      arr[i] = prompt("Nhập vào số nguyên thứ " + (i+1))
+  }
+   // arr[0] = prompt("Nhập vào số thứ nhất");
+   // arr[1] = prompt("Nhập vào số thứ hai");
+   // arr[2] = prompt("Nhập vào số thứ ba");
+   // arr[3] = prompt("Nhập vào số thứ tư");
+   // arr[4] = prompt("Nhập vào số thứ năm");
+   // arr[6] = prompt("Nhập vào số thứ bảy");
+   // arr[7] = prompt("Nhập vào số thứ tám");
+   // arr[8] = prompt("Nhập vào số thứ chín");
+   // arr[9] = prompt("Nhập vào số thứ mười");
   let count = 0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] >= 10){
