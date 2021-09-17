@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+
+<body>
+<h1> Từ điển </h1>
+<input type="text" id="dauVao">
+<button onclick="dich()">Dịch</button>
+<h3 id="rs"></h3>
+<script>
+    let english = ["house", "dog", "cat", "plane", "boat", "animal"]
+    let viet = ["ngôi nhà", "con chó", "con mèo", "máy bay", "thuyền", "động vật"]
+
+    function dich() {
+        let dauVao = document.getElementById("dauVao").value;
+        if (english.indexOf(dauVao) !== -1) {
+            result = viet[english.indexOf(dauVao)] ;
+            document.getElementById("rs").innerHTML = result
+        }
+    }
+
+</script>
+</body>
+
+</html>
