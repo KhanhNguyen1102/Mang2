@@ -7,19 +7,27 @@
 <body>
 <center>
     <h1>Type anything slowly</h1>
-    <textarea id="textToFake" cols="50" rows="8" onkeydown="faker()"></textarea>
+    <form>
+        <label>
+            <textarea id="textToFake" cols="50" rows="8" onkeydown="faker()" ></textarea>
+        </label>
+    </form>
 </center>
 <script>
-    let fake = ["I"," ","L","O","V","E"," ","Y","O","U","!"]
-    let text = "" ;
-    let area = document.getElementById("textToFake").value;
-    function faker(){
-        for (let i = 0; i < area.length; i++) {
-            if (area[i] !== fake[i]){
-                area[i] = fake[i] ;
+    let fake1 = ["I"," ", "L", "O", "V", "E"," ", "Y", "O", "U", "!"]
+    let str = "";
+
+    function faker() {
+        let text = document.getElementById("textToFake").value;
+        for (let i = 0; i < text.length; i++) {
+            str = str + fake1[i];
+            if (i === 11) {
+                str = "";
             }
         }
-        document.getElementById("textToFake").innerHTML = area ;
+        document.getElementById("textToFake").value = str;
+        str = "";
+        setTimeout("faker()", 1);
     }
 </script>
 </body>
