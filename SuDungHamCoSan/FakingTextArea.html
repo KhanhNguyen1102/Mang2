@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui Faking Textarea on Typin</title>
+</head>
+<body>
+<center>
+    <h1>Type anything slowly</h1>
+    <textarea id="textToFake" cols="50" rows="8" onkeydown="faker()"></textarea>
+</center>
+<script>
+    let fake = ["I"," ","L","O","V","E"," ","Y","O","U","!"]
+    let text = "" ;
+    let area = document.getElementById("textToFake").value;
+    function faker(){
+        for (let i = 0; i < area.length; i++) {
+            if (area[i] !== fake[i]){
+                area[i] = fake[i] ;
+            }
+        }
+        document.getElementById("textToFake").innerHTML = area ;
+    }
+</script>
+</body>
+</html>
