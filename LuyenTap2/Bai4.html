@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập vào 1 câu <br>
+<input type="text" id="input">
+<button onclick="checkWord()">Kiểm tra câu có bao nhiêu từ</button>
+<p id="rs"></p>
+<script>
+    function checkWord(){
+        let input = document.getElementById("input").value;
+        let arr = input.split(" ");
+        let count = 0 ;
+        document.getElementById("rs").innerHTML = "Câu của bạn có " + arr.length + " từ"
+    }
+</script>
+</body>
+</html>
