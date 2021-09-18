@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<br> <br>
+<button onclick="check()">Thêm vào mảng </button>
+<br> <br>
+<p id="rs"></p>
+<script>
+
+  let arr = [];
+
+  function check(){
+    let count = 0 ;
+    let text = document.getElementById("input").value;
+    arr.push(text);
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] = parseInt(arr[i]) ){
+        count++;
+      }
+    }
+    document.getElementById("rs").innerHTML = "Bạn vừa thêm " + text + " vào mảng" + "<br>" + "Trong mảng có " + count  + " phần tử là số"
+    document.getElementById("input").value = ""
+
+  }
+
+</script>
+</body>
+</html>
