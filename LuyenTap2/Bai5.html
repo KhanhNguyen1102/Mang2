@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập vào mỗi ô 1 câu <br>
+<input type="text" id="input1"> <br> <br>
+<input type="text" id="input2"> <br> <br>
+
+<button onclick="checkEqual()">Kiểm tra 2 chuỗi có giống nhau không</button>
+<br>
+<p id="rs"></p>
+<script>
+    function checkEqual(){
+        let input1 = document.getElementById("input1").value;
+        let input2 = document.getElementById("input2").value;
+        let arr1 = input1.split("");
+        let arr2 = input2.split("");
+        let isEqual = true;
+        if (arr1.length >= arr2.length){
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]){
+                    isEqual = false;
+                    break;
+                }
+            }
+        } else {
+            for (let i = 0; i < arr2.length; i++) {
+                if (arr2[i] !== arr1[i]){
+                    isEqual = false;
+                    break;
+                }
+            }
+        }
+        if(isEqual){
+            document.getElementById("rs").innerHTML ="Hai chuỗi giống nhau"
+        }else {
+            document.getElementById("rs").innerHTML ="Hai chuỗi khác nhau"
+        }
+    }
+</script>
+</body>
+</html>
