@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<br><br>
+<button onclick="pushWord()">Thêm vào mảng </button>
+<br>
+<p id="add"></p>
+<br>
+Thay tất cả kí tự - trong mảng bằng _ :
+<br><br>
+<button onclick="change()" > Run</button>
+<p id="rs"></p>
+</body>
+<script>
+  let arr = [];
+  function pushWord(){
+    let text = document.getElementById("input").value;
+    arr.push(text)
+    document.getElementById("add").innerHTML = "Bạn vừa thêm phần tử " + text + " vào mảng"
+    document.getElementById("input").value = "";
+  }
+  function change() {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] == "-") {
+        arr[i] = "_" ;
+      }
+    }
+    console.log(arr);
+  }
+</script>
+</html>
